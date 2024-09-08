@@ -1,4 +1,5 @@
 import React from 'react'
+import MyButton from './UI/button/MyButton'
 
 export default function Postitem(props) {
   return (
@@ -10,7 +11,9 @@ export default function Postitem(props) {
         </div>
     </div>
     <div className="post__btns">
-        <button>удалить</button>
+        <MyButton onClick={() => props.remove(props.post)}>
+          удалить
+        </MyButton>
     </div>
   </div>
   )
